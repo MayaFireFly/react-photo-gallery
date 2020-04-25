@@ -1,0 +1,52 @@
+/* antic-regular - latin */
+@font-face {
+  font-family: 'Antic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/antic-v11-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Antic Regular'), local('Antic-Regular'),
+       url('../../fonts/antic-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/antic-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/antic-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/antic-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+*{
+  font-family: 'Antic', sans-serif;
+  box-sizing: border-box;
+  --fontColor: #011627;
+  --bgColor: #FDFFFC;
+  --blueColor: #2EC4B6;
+  --orangeColor: #FF9F1C;
+  --redColor: #E71D36;  
+}
+.App{  
+  background-color: var(--bgColor);
+  color: var(--fontColor);
+  margin: 0;
+  width: 100%;   
+}
+.App__header,
+.App__content{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.App__header{
+  height: 10vh;  
+}
+.App__content{
+  height: 90vh;
+  overflow: auto;
+}
+.App__row, .App__col{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.App__row{
+  flex-direction: row;
+  width: 100%;
+}
+.App__col{
+  flex-direction: column;
+  height: 100%;
+}

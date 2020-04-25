@@ -1,0 +1,35 @@
+.User{
+  padding: 1em 0 0 1em;     
+}
+.User__row, 
+.User__col{
+  display: flex;
+  flex-wrap: wrap;
+}
+.User__row{
+  flex-direction: row;
+  width:100%;
+}
+.User__col{
+  flex-direction: column;
+}
+.User__col_w-100{
+  width: 100%;
+}
+.User__col_w-25{
+  width: 25%;
+}
+.User_clickable{
+  cursor: pointer;
+  font-weight: bold;
+}
+.User_clickable:hover,
+.User_clickable:focus{
+  color: var(--blueColor);
+}
+.User_h-2{
+  height: 2em;
+}
+.User_h-auto{
+  height: auto;
+}
