@@ -19,9 +19,11 @@
 .User__col_w-25{
   width: 25%;
 }
+.User_font-bold{
+  font-weight: bold;
+}
 .User_clickable{
   cursor: pointer;
-  font-weight: bold;
 }
 .User_clickable:hover,
 .User_clickable:focus{
@@ -32,4 +34,21 @@
 }
 .User_h-auto{
   height: auto;
+}
+.User_cursor-progress{
+  cursor: progress;
+}
+@media (max-width:768px){
+  .User__col_w-25{
+    width: 50%;
+  }
+}
+@media (max-width:600px){
+  .User__col_w-25{
+    width: 100%;
+    text-align: center;
+  }
+  .User_h-2{
+    height: 5em;
+  }
 }

@@ -1,0 +1,57 @@
+.Album-popup{
+  z-index: 2;
+  border: 1px solid var(--fontColor);
+  background-color: var(--bgColor);
+  border-radius: 2px;
+  box-shadow: 0 0 3px rgba(1,22,39,1), 0 0 4px rgba(1,22,39,0.8), 0 0 5px rgba(1,22,39,0.6);
+  position: absolute; 
+  top: 5em;
+  left: 10em;
+  right: 10em;   
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1em;
+  min-width: 15em;
+  max-height: 80vh;
+  overflow: auto;
+}
+.Album-popup__header{
+  height: 4em;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.Album-popup__header > h4{
+  width: 95%;
+  text-align: center;
+}
+.Album-popup__header > div{
+  width: 5%;
+  text-align: right;
+}
+.Album-popup__close{
+  width: 1em;
+  height: auto;
+  cursor: pointer;
+}
+.Album-popup__content{
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.Album-popup__image{
+  cursor: pointer;
+}
+@media (max-width:768px){
+  .Album-popup{
+    left: 3em;
+    right: 3em;
+  }
+}

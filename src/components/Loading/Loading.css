@@ -1,6 +1,6 @@
 .Loading{
   position: absolute;
-  left: 50%;
+  left: 52%;
   top: 50%;
   z-index: 1;
   width: 60px;
@@ -21,4 +21,9 @@
 @keyframes spin{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+@media (max-width:768px){
+  .Loading{
+    left: 57%;
+  }  
 }

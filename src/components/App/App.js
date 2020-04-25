@@ -1,10 +1,12 @@
-import React, {useEffect, useReducer} from 'react';
+import React, {useEffect, useReducer, useState} from 'react';
 import './App.css';
 import axios from 'axios';
 import Header from '../Header/Header';
 import Loading from '../Loading/Loading';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import User from '../User/User';
+import AlbumPopup from '../AlbumPopup/AlbumPopup';
+import PhotoPopup from '../PhotoPopup/PhotoPopup';
 
 const URL = 'https://jsonplaceholder.typicode.com/';
 
@@ -44,6 +46,8 @@ const reducer = (state, action) => {
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [popupVisible, setPopupVisible] = useState(false);
+  const [photoPopupVisible, setPhotoPopupVisible] = useState(false);
 
   useEffect(
     () => {
@@ -104,9 +108,19 @@ const App = () => {
           <div className='App__col'>
             {state.users.map((user, index) => (
               <div className='App__row' key={index}>
-                <User user={user} url={URL}/>
+                <User user={user} url={URL} setPopupVisible={setPopupVisible}/>
               </div>
             ))}
+            {popupVisible ? ( 
+              <div className='App__popup'>
+                <AlbumPopup setPopupVisible={setPopupVisible} setPhotoPopupVisible={setPhotoPopupVisible}/>
+              </div>              
+            ) : ''} 
+            {photoPopupVisible && popupVisible ? (
+              <div className='App__popup'>
+                <PhotoPopup setPopupVisible={setPhotoPopupVisible}/>
+              </div>
+            ) : ''}           
           </div>
         )}
       </div>

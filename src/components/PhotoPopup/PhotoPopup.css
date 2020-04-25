@@ -1,0 +1,57 @@
+.Photo-popup{
+  z-index: 2;
+  border: 1px solid var(--blueColor);
+  background-color: var(--bgColor);
+  color: var(--blueColor);
+  border-radius: 2px;
+  box-shadow: 0 0 3px rgba(46,196,182,1), 0 0 4px rgba(46,196,182,0.8), 0 0 5px rgba(46,196,182,0.6);
+  position: absolute; 
+  top: 1em;
+  left: 20em;   
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.Photo-popup__header{
+  height: 2em;
+  width: 100%;
+  text-align: right;
+  padding: .5em .5em 0 0;
+}
+.Photo-popup__close{
+  width: 1em;
+  height: auto;
+  cursor: pointer;
+  color: var(--blueColor);
+}
+.Photo-popup__content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width:1140px){
+  .Photo-popup{
+    left: 15em;
+  }  
+}
+@media (max-width:900px){
+  .Photo-popup{
+    left: 10em;
+  }  
+}
+@media (max-width:768px){
+  .Photo-popup{
+    left: 1em;
+  }  
+}
+@media (max-width:600px){
+  .Photo-popup{
+    left: 2em;
+  }   
+  .Photo-popup__content > img{
+    max-width: 300px;
+  }  
+}

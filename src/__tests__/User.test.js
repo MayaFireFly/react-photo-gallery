@@ -10,8 +10,11 @@ describe('User', () => {
     email: 'email',
     id: 1
   };
+  const setPopupVisible = () => {
+    console.log('setPopupVisible in User test');
+  };
   it('render User without crushing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<User user={user} url='testurl'/>, div);
+    ReactDOM.render(<User user={user} url='testurl' setPopupVisible={setPopupVisible}/>, div);
   });       
 });
