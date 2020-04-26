@@ -8,10 +8,22 @@
        url('../../fonts/antic-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../../fonts/antic-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
        url('../../fonts/antic-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../../fonts/antic-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/antic-v11-latin-regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* inria-sans-regular - latin */
+@font-face {
+  font-family: 'Inria Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/inria-sans-v1-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Inria Sans Regular'), local('InriaSans-Regular'),
+       url('../../fonts/inria-sans-v1-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/inria-sans-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/inria-sans-v1-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/inria-sans-v1-latin-regular.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 *{
-  font-family: 'Antic', sans-serif;
+  font-family: 'Antic', 'Inria Sans', sans-serif;
   box-sizing: border-box;
   --fontColor: #011627;
   --bgColor: #FDFFFC;

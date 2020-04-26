@@ -6,8 +6,11 @@ describe('AlbumPopup', () => {
   const setPopupVisible = () => {
     console.log('setPopupVisible in test AlbumPopup');
   };
+  const setPhotoPopupVisible = () => {
+    console.log('setPhotoPopupVisible in test AlbumPopup');
+  };
   it('render AlbumPopup without crushing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<AlbumPopup setPopupVisible={setPopupVisible}/>, div);
+    ReactDOM.render(<AlbumPopup setPopupVisible={setPopupVisible} setPhotoPopupVisible={setPhotoPopupVisible}/>, div);
   });       
 });
